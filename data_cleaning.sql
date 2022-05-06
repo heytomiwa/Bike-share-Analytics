@@ -62,13 +62,13 @@ ALTER TABLE "2019_user_analytics".user_data_2019
 ADD COLUMN day VARCHAR(10);
 
 UPDATE "2019_user_analytics".user_data_2019
-SET day = to_char(start_time, 'Day')
+SET day = to_char(start_time, 'Day');
 --Month
 ALTER TABLE "2019_user_analytics".user_data_2019
 ADD COLUMN month VARCHAR(10);
 
 UPDATE "2019_user_analytics".user_data_2019
-SET month = TRIM(to_char(start_time, 'Month'))
+SET month = TRIM(to_char(start_time, 'Month'));
 --Season
 ALTER TABLE "2019_user_analytics".user_data_2019
 ADD COLUMN season VARCHAR(6);
